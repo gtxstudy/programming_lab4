@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.company.resources.interactors.IResourceConsumer</OriginalElement>
+  <nodes>
+    <node x="450.5" y="83.0">com.company.resources.interactors.ResourceStorage</node>
+    <node x="205.0" y="0.0">com.company.resources.interactors.IResourceConsumer</node>
+    <node x="60.5" y="249.0">com.company.transport.Rover</node>
+    <node x="0.0" y="810.0">com.company.Main</node>
+    <node x="43.0" y="83.0">com.company.transport.Transport</node>
+    <node x="547.75" y="166.0">com.company.resources.interactors.Warehouse</node>
+    <node x="238.0" y="732.0">com.company.Position</node>
+    <node x="217.0" y="83.0">com.company.buildings.ConstructionSite</node>
+    <node x="498.7159090909091" y="410.0">com.company.entities.Researcher</node>
+    <node x="648.2159090909091" y="493.0">com.company.entities.Seledochka</node>
+    <node x="0.0" y="166.0">com.company.transport.PassengerTransport</node>
+    <node x="119.0" y="654.0">com.company.resources.Log</node>
+    <node x="96.0" y="571.0">com.company.resources.Resource</node>
+    <node x="446.0" y="0.0">com.company.resources.interactors.IResourceProvider</node>
+    <node x="379.2159090909091" y="493.0">com.company.entities.Fuchsia</node>
+    <node x="37.0" y="0.0">com.company.IPositioned</node>
+    <node x="0.0" y="410.0">com.company.resources.interactors.IResourceCourier</node>
+    <node x="428.0" y="571.0">com.company.LimitedStore</node>
+    <node x="230.2159090909091" y="493.0">com.company.entities.Shpuntik</node>
+    <node x="515.2159090909091" y="493.0">com.company.entities.Znayka</node>
+    <node x="364.7613636363636" y="327.0">com.company.entities.Midget</node>
+    <node x="425.75" y="166.0">com.company.resources.interactors.Trunk</node>
+    <node x="223.0" y="654.0">com.company.resources.MoonCrystal</node>
+    <node x="405.0" y="732.0">com.company.Gender</node>
+    <node x="564.0" y="732.0">com.company.Device</node>
+    <node x="0.0" y="654.0">com.company.resources.Plank</node>
+    <node x="50.21590909090912" y="493.0">com.company.entities.Vintik</node>
+    <node x="218.0" y="410.0">com.company.entities.Engineer</node>
+    <node x="0.0" y="732.0">com.company.resources.interactors.ResourceCourier</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.company.resources.MoonCrystal" target="com.company.resources.Resource" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="303.0" y="629.0" />
+      <point x="161.0" y="629.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.buildings.ConstructionSite" target="com.company.resources.interactors.IResourceConsumer" relationship="REALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Seledochka" target="com.company.entities.Researcher" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="722.7159090909091" y="473.0" />
+      <point x="571.7159090909091" y="473.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Fuchsia" target="com.company.entities.Researcher" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="437.2159090909091" y="473.0" />
+      <point x="571.7159090909091" y="473.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.resources.interactors.ResourceStorage" target="com.company.resources.interactors.IResourceProvider" relationship="REALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Engineer" target="com.company.entities.Midget" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="282.0" y="385.0" />
+      <point x="421.2613636363636" y="385.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.transport.Transport" target="com.company.IPositioned" relationship="REALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.transport.Rover" target="com.company.transport.PassengerTransport" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Vintik" target="com.company.resources.interactors.IResourceCourier" relationship="REALIZATION">
+      <point x="-25.75" y="-16.5" />
+      <point x="75.96590909090912" y="473.0" />
+      <point x="99.0" y="473.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.resources.Plank" target="com.company.resources.Resource" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="49.5" y="629.0" />
+      <point x="161.0" y="629.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.resources.Log" target="com.company.resources.Resource" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Shpuntik" target="com.company.entities.Engineer" relationship="GENERALIZATION">
+      <point x="32.25" y="-16.5" />
+      <point x="326.9659090909091" y="463.0" />
+      <point x="282.0" y="463.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.buildings.ConstructionSite" target="com.company.IPositioned" relationship="REALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="315.5" y="63.0" />
+      <point x="111.0" y="63.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.resources.interactors.ResourceStorage" target="com.company.resources.interactors.IResourceConsumer" relationship="REALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="549.0" y="53.0" />
+      <point x="315.5" y="53.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.resources.interactors.Trunk" target="com.company.resources.interactors.ResourceStorage" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="476.75" y="141.0" />
+      <point x="549.0" y="141.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.resources.interactors.Warehouse" target="com.company.resources.interactors.ResourceStorage" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="621.25" y="141.0" />
+      <point x="549.0" y="141.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.transport.PassengerTransport" target="com.company.transport.Transport" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Vintik" target="com.company.entities.Engineer" relationship="GENERALIZATION">
+      <point x="25.75" y="-16.5" />
+      <point x="127.46590909090912" y="463.0" />
+      <point x="282.0" y="463.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Shpuntik" target="com.company.resources.interactors.IResourceCourier" relationship="REALIZATION">
+      <point x="-32.25" y="-16.5" />
+      <point x="262.4659090909091" y="473.0" />
+      <point x="99.0" y="473.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Researcher" target="com.company.entities.Midget" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="571.7159090909091" y="385.0" />
+      <point x="421.2613636363636" y="385.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.company.entities.Znayka" target="com.company.entities.Researcher" relationship="GENERALIZATION">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5701042873696408" showDependencies="false" x="399.0" y="421.5" />
+  <SelectedNodes>
+    <node>com.company.resources.interactors.IResourceConsumer</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
