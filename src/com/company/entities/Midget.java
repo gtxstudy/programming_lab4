@@ -1,7 +1,5 @@
 package com.company.entities;
 
-import com.company.Gender;
-
 public class Midget {
     private final String name;
     private final Gender gender;
@@ -29,5 +27,10 @@ public class Midget {
                 "name='" + name + '\'' +
                 ", gender=" + gender +
                 '}';
+    }
+
+    public enum Gender {
+        MALE,
+        FEMALE
     }
 }

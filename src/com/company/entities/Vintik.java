@@ -1,6 +1,5 @@
 package com.company.entities;
 
-import com.company.Gender;
 import com.company.resources.interactors.IResourceConsumer;
 import com.company.resources.interactors.IResourceCourier;
 import com.company.resources.interactors.IResourceProvider;

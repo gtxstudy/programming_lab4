@@ -1,6 +1,5 @@
 package com.company.entities;
 
-import com.company.Gender;
 import com.company.Device;
 
 import java.util.Random;

@@ -7,9 +7,11 @@ import java.util.Objects;
 
 public abstract class Transport implements IPositioned{
     protected Position position;
+    private final String name;
 
-    public Transport(Position startPosition){
+    public Transport(Position startPosition, String transportName){
         position = startPosition;
+        name = transportName;
     }
 
     @Override
@@ -37,5 +39,9 @@ public abstract class Transport implements IPositioned{
     @Override
     public int hashCode() {
         return Objects.hash(position);
+    }
+
+    public String getName() {
+        return name;
     }
 }

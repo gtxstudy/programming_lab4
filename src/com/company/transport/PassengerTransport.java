@@ -10,8 +10,8 @@ public abstract class PassengerTransport extends Transport{
 
     LimitedStore<Midget> passengers;
 
-    public PassengerTransport(Position startPosition, int placesCount){
-        super(startPosition);
+    public PassengerTransport(Position startPosition, int placesCount, String transportName){
+        super(startPosition, transportName);
         passengers = new LimitedStore<>(placesCount);
     }
 
