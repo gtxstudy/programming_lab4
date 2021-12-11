@@ -1,6 +1,7 @@
 package com.company.resources.interactors;
 
 import com.company.LimitedStore;
+import com.company.exceptions.StorageIsEmptyException;
 import com.company.resources.Resource;
 
 import java.util.Objects;
@@ -28,8 +29,12 @@ public class ResourceStorage implements IResourceProvider, IResourceConsumer {
     }
 
     @Override
-    public Resource takeResource() {
-        return store.getFirst();
+    public Resource takeResource() throws StorageIsEmptyException {
+        Resource resource = store.getFirst();
+        if (resource == null)
+            throw new StorageIsEmptyException();
+        store.remove(resource);
+        return resource;
     }
 
     @Override

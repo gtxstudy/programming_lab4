@@ -1,5 +1,6 @@
 package com.company.entities;
 
+import com.company.exceptions.StorageIsEmptyException;
 import com.company.resources.interactors.IResourceConsumer;
 import com.company.resources.interactors.IResourceCourier;
 import com.company.resources.interactors.IResourceProvider;
@@ -13,6 +14,10 @@ public class Shpuntik extends Engineer implements IResourceCourier {
 
     @Override
     public void deliver(IResourceConsumer consumer, IResourceProvider provider) {
-        ResourceCourier.deliver(consumer, provider);
+        try {
+            ResourceCourier.deliver(consumer, provider);
+        } catch (StorageIsEmptyException e) {
+            e.printStackTrace();
+        }
     }
 }

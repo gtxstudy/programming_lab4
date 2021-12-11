@@ -3,7 +3,6 @@ package com.company.transport;
 import com.company.IPositioned;
 import com.company.Position;
 import com.company.exceptions.TrunkNotOpenedException;
-import com.company.resources.Resource;
 import com.company.resources.interactors.ResourceStorage;
 
 public class Rover extends PassengerTransport {
@@ -23,9 +22,9 @@ public class Rover extends PassengerTransport {
 
     @Override
     public void moveTo(IPositioned destination) {
-        System.out.printf("Еду в точку %s", destination.getCoordinates().toString());
+        System.out.printf("Еду в точку %s\n", destination.getCoordinates().toString());
         position = destination.getCoordinates();
-        System.out.printf("Достиг точки %s", position.toString());
+        System.out.printf("Достиг точки %s\n", position.toString());
     }
 
     public Door getRDoor() {
@@ -36,7 +35,7 @@ public class Rover extends PassengerTransport {
         return lDoor;
     }
 
-    protected class Trunk{
+    public class Trunk{
 
         private final ResourceStorage storage;
         private boolean isOpened = false;

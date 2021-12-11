@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.exceptions.StoreOverflowedException;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +21,7 @@ public class LimitedStore<T> {
                 return;
             }
         }
-        throw new IndexOutOfBoundsException();
+        throw new StoreOverflowedException();
     }
 
     public void remove(T item){
@@ -33,8 +35,9 @@ public class LimitedStore<T> {
 
     public T getFirst(){
         for (Object item : items) {
-            if (item != null)
-                return (T)item;
+            if (item != null) {
+                return (T) item;
+            }
         }
         return null;
     }

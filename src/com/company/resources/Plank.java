@@ -8,6 +8,6 @@ public class Plank extends Resource{
 
     @Override
     public String describe() {
-        return null;
+        return "Доска";
     }
 }

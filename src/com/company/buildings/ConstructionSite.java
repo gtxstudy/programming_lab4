@@ -3,6 +3,7 @@ package com.company.buildings;
 import com.company.IPositioned;
 import com.company.Position;
 import com.company.exceptions.NotEnoughResourcesException;
+import com.company.exceptions.StorageIsEmptyException;
 import com.company.resources.interactors.IResourceConsumer;
 import com.company.resources.interactors.ResourceStorage;
 import com.company.resources.Resource;
@@ -25,11 +26,12 @@ public class ConstructionSite implements IResourceConsumer, IPositioned {
         if (resourceCount < BuildingType.HOUSE.neededResource)
             throw new NotEnoughResourcesException(BuildingType.HOUSE.neededResource, resourceCount);
         int tookResources = 0;
-        while (warehouse.canProvide() && tookResources < BuildingType.HOUSE.neededResource) {
+        while (tookResources < BuildingType.HOUSE.neededResource) {
             Resource resource = warehouse.takeResource();
             System.out.printf("Достан %s и израсходовал в процессе стройки\n", resource.describe());
             tookResources += 1;
         }
+
         resourceCount -= BuildingType.HOUSE.neededResource;
 
         return new IBuilding() {
@@ -57,7 +59,7 @@ public class ConstructionSite implements IResourceConsumer, IPositioned {
     @Override
     public void putResource(Resource resource) {
         warehouse.putResource(resource);
-        resourceCount -= 1;
+        resourceCount += 1;
     }
 
     @Override
@@ -97,13 +99,13 @@ public class ConstructionSite implements IResourceConsumer, IPositioned {
         }
     }
 
-    interface IBuilding extends IPositioned{
+    public interface IBuilding extends IPositioned{
         String getName();
         BuildingType getType();
     }
 
-    enum BuildingType {
-        HOUSE(140);
+    public enum BuildingType {
+        HOUSE(2);
 
         final int neededResource;
 
