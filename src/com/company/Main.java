@@ -37,7 +37,7 @@ public class Main {
                 Resource resource = storage.takeResource();
                 constructionSite.putResource(resource);
             }
-        } catch (TrunkNotOpenedException | StorageIsEmptyException e) {
+        } catch (TrunkNotOpenedException e) {
             e.printStackTrace();
         } finally {
             rover.getTrunk().close();
